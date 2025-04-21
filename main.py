@@ -10,7 +10,7 @@ load_dotenv('.env')
 
 API_KEY=str(os.getenv('GROQ_API_KEY'))
 
-st.set_page_config(page_title='YouTube Script Generator ',layout="wide",)
+st.set_page_config(page_title='YouTube Script Generator ',layout="wide",page_icon=":movie_camera:")
 st.title('Youtube Video Script Generator')
 st.header('Script Maker')
 
@@ -18,7 +18,7 @@ st.header('Script Maker')
 client = Groq(api_key=API_KEY)
 
 VALID_KEYWORDS = [
-    "video", "gameplay", "vlog", "tutorial", "reaction", "review", "challenge", "stream", "let's play", "playthrough",
+    "video",'Youtube','yt','script', "gameplay", "vlog", "tutorial", "reaction", "review", "challenge", "stream", "let's play", "playthrough",
     "unboxing", "commentary", "tips", "guide", "how-to", "review", "streaming", "behind-the-scenes", "exploration", 
     "documentary", "interview", "show", "series", "live", "educational", "discussion", "collaboration", "content",
     "analysis", "opinion", "storytime", "travel", "music video", "skit", "parody", "animation", "sketch", "concept video",
@@ -90,7 +90,7 @@ def generate_script_cached(user_input):
         response = client.chat.completions.create(
             messages=[{"role": "system", "content": "You are a YouTube video script generator generate in form Title, Intro ,concept, objectives, challenges, storyline, finalresult, Outro. If the topic is good to be generated in this form. "},
                       {"role": "user", "content": f"Generate a YouTube script about {user_input}."}],
-            model="llama-3.2-3b-preview", 
+            model="llama-3.1-8b-instant", 
             max_tokens=1000)
 
         if response.choices:
@@ -108,7 +108,7 @@ def generate_script_async(user_input):
         return future.result()
 
 # Sidebar for Navigation
-page = st.sidebar.selectbox("Select Page", ["Generate Script", "View History"])
+page = st.sidebar.selectbox("Select Page", ["Generate Script",'Valid Keywords', "View History"])
 
 if page == "Generate Script":
     # Main Screen for Script Generation
@@ -130,6 +130,14 @@ if page == "Generate Script":
                     st.error(f"Error: {e}")
         else:
             st.error("❌ Please enter a the video details.")
+
+elif page == "Valid Keywords":
+    # Valid Keywords Screen
+    st.write("### Valid Keywords")
+    with st.expander("📌 Click to view all valid keywords"):
+        for keyword in VALID_KEYWORDS:
+            st.write(f"- {keyword}")
+            st.write("_____")
     
 elif page == "View History":
     # History Screen
