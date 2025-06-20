@@ -68,30 +68,9 @@ streamlit run app.py
 - View History – See previously generated scripts and delete them if needed.
 ---
 ## 📸 UI Preview
-Add a screenshot to assets/screenshot.png and uncomment this in your README if desired:
 ![App Screenshot](assets/screenshot.png)
 
 ---
-## 🧠 Prompt Format
-The AI is instructed to generate responses using a structured format:
-
-- Title
-
-- Intro
-
-- Concept
-
-- Objectives
-
-- Challenges
-
-- Storyline
-
-- Final Result
-
-- Outro
----
-
 ## 🧑‍💻 Author
 Built by Pramit Acharjya
 For content creators, scriptwriters, and AI enthusiasts.
