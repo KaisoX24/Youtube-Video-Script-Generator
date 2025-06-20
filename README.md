@@ -35,7 +35,7 @@ A dynamic Streamlit web app that uses **LLaMA 3.1 via Groq API** to generate str
 
 ```bash
 git clone https://github.com/KaisoX24/Youtube-Video-Script-Generator.git
-cd youtube-script-generator
+cd Youtube-Video-Script-Generator
 ```
 ### 2. Install Dependencies
 It's recommended to use a virtual environment:
