@@ -72,7 +72,7 @@ streamlit run app.py
 
 ---
 ## 🧑‍💻 Author
-Built by Pramit Acharjya
+Developed by Pramit Acharjya
 ---
 ## 🪪 License
 MIT License — free to use, modify, and distribute.
