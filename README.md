@@ -42,7 +42,7 @@ It's recommended to use a virtual environment:
 
 ```bash
 python -m venv venv
-venv\\Scripts\\activate # For MAC: source venv/bin/activate
+venv\Scripts\activate # For MAC: source venv/bin/activate
 ```
 - Install the required packages:
 
