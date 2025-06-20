@@ -34,7 +34,7 @@ A dynamic Streamlit web app that uses **LLaMA 3.1 via Groq API** to generate str
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/youtube-script-generator.git
+git clone https://github.com/KaisoX24/Youtube-Video-Script-Generator.git
 cd youtube-script-generator
 ```
 ### 2. Install Dependencies
@@ -73,7 +73,6 @@ streamlit run app.py
 ---
 ## 🧑‍💻 Author
 Built by Pramit Acharjya
-For content creators, scriptwriters, and AI enthusiasts.
 ---
 ## 🪪 License
 MIT License — free to use, modify, and distribute.
